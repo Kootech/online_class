@@ -7,6 +7,7 @@ import { getLessions } from "../features/lessions/lessionSlice";
 
 const Home = () => {
   const { lessions } = useSelector((state) => state.lessions);
+  const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -14,7 +15,8 @@ const Home = () => {
   }, []);
   return (
     <>
-      {console.log(lessions)}
+      {/* {console.log(lessions)} */}
+      {console.log(user)}
       {lessions.length > 0 ? (
         <div className="grid grid-cols-1 gap-2 md:grid-cols-3 xl:grid-cols-4 m-2">
           {lessions.map((lession) => {

@@ -8,6 +8,10 @@ export const lessionApiRequest = async () => {
 };
 
 export const loginApiRequest = async (data) => {
-  const response = await axios.post(`${uri}/api/token`, data);
+  const response = await axios.post(`${uri}/api/token/`, data, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
   return response.data;
 };

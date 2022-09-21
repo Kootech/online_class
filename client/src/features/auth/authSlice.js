@@ -10,11 +10,14 @@ const initialState = {
 export const userLogin = createAsyncThunk(
   "loginUser/",
   async (data, ThunkAPI) => {
+    console.log(data);
     try {
-      const data = await loginApiRequest(data);
-      return data;
+      const res = await loginApiRequest(data);
+      console.log("async thunk done");
+
+      return res;
     } catch (error) {
-      return ThunkAPI.rejectWithValue();
+      return ThunkAPI.rejectWithValue(error);
     }
   }
 );

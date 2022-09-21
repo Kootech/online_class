@@ -1,39 +1,40 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav className="bg-gray-50 dark:bg-gray-700 rounded-xl mt-1">
+    <nav className="bg-gray-50 dark:bg-gray-700 rounded-xl mt-1 md:justify-center md:grid">
       <div className="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
         <div className="flex items-center">
           <ul className="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="text-gray-900 dark:text-white hover:underline"
                 aria-current="page"
               >
                 All
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="text-gray-900 dark:text-white hover:underline"
               >
                 Machine Learning
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="text-gray-900 dark:text-white hover:underline"
               >
                 Web
-              </a>
+              </Link>
             </li>
             <li>
               <a
-                href="#"
+                to="/"
                 className="text-gray-900 dark:text-white hover:underline"
               >
                 Security

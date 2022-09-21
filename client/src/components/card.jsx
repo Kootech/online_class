@@ -5,7 +5,11 @@ const Card = ({ lession }) => {
   return (
     <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
       <a href="#">
-        <img className="rounded-t-lg" src={image} alt="" />
+        <img
+          className="rounded-t-lg"
+          src={`http://localhost:8000${lession.profile_pic}`}
+          alt=""
+        />
       </a>
       <div className="p-5">
         <h3>machine learning</h3>

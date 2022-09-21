@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 
 import lessionReducer from "../features/lessions/lessionSlice";
 import authReducer from "../features/auth/authSlice";
@@ -8,6 +8,8 @@ const store = configureStore({
     lessions: lessionReducer,
     user: authReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({ serializableCheck: false }),
 });
 
 export default store;

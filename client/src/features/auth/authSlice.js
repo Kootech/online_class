@@ -2,8 +2,10 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 import { loginApiRequest } from "../../services/api";
 
+const user = JSON.parse(localStorage.getItem("lession-app-user"));
+
 const initialState = {
-  user: [],
+  user: user ? user : null,
   message: "",
 };
 

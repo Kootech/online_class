@@ -150,4 +150,4 @@ AUTH_USER_MODEL = "api.User"
 #     ]
 # }
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True 

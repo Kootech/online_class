@@ -7,6 +7,7 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import Header from "./components/header";
 import Nav from "./components/nav";
+import Lession from "./pages/lession";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/lession/:id" element={<Lession />} />
           </Route>
         </Routes>
       </BrowserRouter>
